@@ -2,12 +2,12 @@ Pod::Spec.new do |s|
   s.name         = "FPCrypto"
   s.version      = "1.0.0"
   s.summary      = "Crypto functions used in FitPaySDK for iOS"
-  s.description  = "FitPaySDK. Supports OSX and iOS including Simulator (armv7,armv7s,arm64,i386,x86_64)."
+  s.description  = "Crypto functions used in FitPaySDK for iOS"
   s.homepage     = "http://www.fit-pay.com"
   s.license      = 'MIT'
-  s.source       = { :git => '.', :commit => '7660afda8ffe450b400ea32264ecce33566ed14d' }
+  s.source       = { :git => 'https://github.com/fitpay/FPCrypto.git', :tag => '1.0.0' }
   s.source_files = 'source/*.{h,m}'
-  s.authors       =  {'Igor Kravchenko' => 'igman2005@gmail.com'}
+  s.authors      =  {'Igor Kravchenko' => 'igman2005@gmail.com'}
   s.dependency 'OpenSSL-Universal', '~> 1.0'
   s.ios.platform          = :ios, '6.0'
   s.ios.deployment_target = '6.0'
