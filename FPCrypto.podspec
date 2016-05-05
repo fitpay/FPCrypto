@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "FPCrypto"
   s.version      = "1.0.0"
-  s.summary      = "Crypto functions used in FitPaySDK for iOS"
+  s.summary      = "Internal module for FitPaySDK"
   s.description  = "Crypto functions used in FitPaySDK for iOS"
   s.homepage     = "http://www.fit-pay.com"
   s.license      = 'MIT'
