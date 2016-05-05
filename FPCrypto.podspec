@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.description  = "FitPaySDK. Supports OSX and iOS including Simulator (armv7,armv7s,arm64,i386,x86_64)."
   s.homepage     = "http://www.fit-pay.com"
   s.license      = 'MIT'
-  s.source       = 'source/*.{h,m}'
+  s.source       = { :git => '.', :commit => '7660afda8ffe450b400ea32264ecce33566ed14d' }
   s.source_files = 'source/*.{h,m}'
   s.authors       =  {'Igor Kravchenko' => 'igman2005@gmail.com'}
   s.dependency 'OpenSSL-Universal', '~> 1.0'
