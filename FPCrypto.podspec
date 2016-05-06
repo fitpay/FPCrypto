@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.authors      =  {'Igor Kravchenko' => 'igman2005@gmail.com'}
   s.source       = { :git => 'https://github.com/fitpay/FPCrypto.git', :branch => 'master' }
-  s.source_files = 'source/*.{h,modulemap}'
+  s.source_files = 'source/*.{h,_modulemap}'
   s.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/FPCrypto/source' }
   s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/FPCrypto/source' }
   s.dependency 'OpenSSL-Universal', '~> 1.0'
@@ -16,4 +16,9 @@ Pod::Spec.new do |s|
   s.osx.platform          = :osx, '10.9'
   s.osx.deployment_target = '10.8'
   s.requires_arc = false
+  s.prepare_command = <<-CMD
+    if [ -f $(PODS_ROOT)/FPCrypto/source/module._modulemap ]; then
+       mv $(PODS_ROOT)/FPCrypto/source/module._modulemap $(PODS_ROOT)/FPCrypto/source/module.modulemap
+     fi
+  CMD
 end
